@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Плохое ЖКХ - сервис борьбы с некачественными комунальными услугами</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -16,6 +16,7 @@
             <ul>
                 <li><a href="#">Как это работает?</a></li>
                 <li><a href="#">Отправить запрос</a></li>
+                <li><a href="#">Помочь проекту</a></li>
             </ul>
         </nav>
     </header>
@@ -31,22 +32,26 @@
             может облегчить вам жизнь!
         </p>
     </section>
-    <section class="form">
-        <form action="">
+    <section class="submit-form">
+        <form action="php/submit.php" method="POST">
             <p>Выберите проблему</p>
-            <p><select>
-                    <option value="">--Выбеоите проблему--</option>
-                    <option value="Ржавая вода">Ржавая вода</option>
-                    <option value="Нет воды">Нет воды</option>
-                    <option value="Яма на дороге">Яма на дороге</option>
+            <p><select name="problems[]">
+                    <option value="">--Выбеhите проблему--</option>
+                    <option value="rusty_water">Ржавая вода</option>
+                    <option value="no_water">Нет воды</option>
+                    <option value="pit">Яма на дороге</option>
                 </select></p>
-            <p>Ваше имя:<input type="text" size="40"></p>
+            <p>Ваше имя:<input type="text" size="40" name="name"></p>
             <p>Ваш адрес:</p>
-            <p>Улица:<input type="text" size="40">
-                Номер дома:<input type="text" size="10">
-                Номер квартиры<input type="text" size="10"></p>
-            <button>Отправить</button>
+            <p>Улица:<input type="text" size="40" name="street"></p>
+            <p>Номер дома:<input type="text" size="10" name="building"></p>
+            <p>Номер квартиры<input type="text" size="10" name="appartments"></p>
+            <input type="submit" value="Отправить">
         </form>
+    </section>
+    <section class="help">
+        <h2>Как помочь проекту?</h2>
+        <p>Помочь проекту можно знаниями или деньгами</p>
     </section>
     <footer>
         Идея и разработка Макс Шопов <a href="#">Facebook</a>
