@@ -5,7 +5,7 @@ $output = "<html>
 <title>Заявление</title>
 </head>
 <body>
-<h1>Ржавая вода</h1>
+<h1>Яма на дороге</h1>
 Вас зовут: $name<br />
 Ваш адрес ул. $street д. $building, кв. $appartments<br />
 Ваша проблема:  $problems
